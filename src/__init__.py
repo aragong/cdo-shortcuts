@@ -4,5 +4,6 @@
 __version__ = "0.0.1"
 
 from src.mergetime import mergetime
+from src.settaxis import settaxis
 
-__all__ = ["mergetime"]
+__all__ = ["mergetime", "settaxis"]
