@@ -3,9 +3,10 @@ Simple functions to manage NetCDF-files based on CDO library
 
 
 ## :gear: Functionalities (functions)
-- `cdo_mergetime:` stacks netcdfs by time, subset variables if needed.
-- `cdo_regrid:` re-interpolate NetCDF to a new grid defined by the user. (*To be implemented)
-- `cdo_subset:` subset NetCDF coordinates (lon, lat, time) and variables. (*To be implemented)
+- `mergetime:` stacks netcdfs by time, subset variables if needed.
+- `settaxis:` redefine time axis based initial datetime and timestep value. 
+- `regrid:` re-interpolate NetCDF to a new grid defined by the user. (*To be implemented)
+- `subset:` subset NetCDF coordinates (lon, lat, time) and variables. (*To be implemented)
 
 
 ----

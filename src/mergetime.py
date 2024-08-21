@@ -6,7 +6,7 @@ from time import time
 from typing import Union
 
 
-def cdo_mergetime(
+def mergetime(
     input_nc_paths: list[str],
     output_nc_path: str,
     variables: Union[list[str], None] = None,
@@ -22,7 +22,7 @@ def cdo_mergetime(
     """
 
     t0 = time()
-    tmp_dir = TemporaryDirectory(dir=".")
+    tmp_dir = TemporaryDirectory(dir=output_nc_path.parent, prefix="tmp_")
     output_nc_path = Path(output_nc_path)
 
     if variables:
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     paths = [str(path) for path in Path("data").glob("*.nc")]
     paths.sort()
 
-    cdo_mergetime(
+    mergetime(
         input_nc_paths=paths,
         output_nc_path="merged.nc",
         variables=["u", "v", "mslp", "visibility", "wind_gust"],
